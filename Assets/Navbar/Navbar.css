@@ -1,0 +1,147 @@
+.overlay
+{
+    pointer-events: none; 
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    opacity: 10%;
+    mix-blend-mode: luminosity;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*DESKTOP*/
+@media (min-width: 900px)
+{
+    .navbar
+    {
+        position: sticky;
+        top: 300;
+        display: flex;
+        justify-content: space-between;
+        height:75px;
+        width:100%;
+        align-items: center;
+    }
+
+    .logoButton
+    {
+        height:50%;
+        display: flex;
+    }
+    
+    .logo
+    {
+        height:75%;
+        align-self: flex-end;
+    }
+    
+    .navbarButtons
+    {
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        gap: 10px;
+    }
+    
+    .navbarButton
+    {
+        text-decoration: underline 2px;
+        
+        color:#ffea00;
+        font-family: 'MADE', sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .navbarButton:hover
+    {
+        font-size: 35px;
+    }
+    
+    .socialButtonFrame
+    {
+        justify-self: right;
+        padding-right: 15px;
+        transform: translate(0, 3px);
+    }
+    
+    .socials
+    {
+        display: flex;
+        justify-content: right;
+    }
+    
+    .socialButton
+    {
+        width: 35px;
+    }
+}
+
+/*MOBILE*/
+@media (max-width: 900px)
+{
+    body
+    {
+        --spacing: 20px
+    }
+
+    .logoButton
+    {
+        height: 100%;
+        width: 100%;
+        margin-top: var(--spacing);
+    }
+    
+    .logo
+    {
+        width: 100%;
+    }
+    
+    .navbarButtons
+    {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .navbarButton
+    {
+        margin: 0;
+        color:#ffea00;
+        font-family: 'MADE', sans-serif;
+        font-size: 25px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .navbarButton:hover
+    {
+        font-size: 35px;
+    }
+
+    .socials
+    {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .socialButtonFrame
+    {
+        justify-self: right;
+        padding-right: 15px;
+        transform: translate(0, 3px);
+    }
+    
+    .socialButton
+    {
+        width: 35px;
+    }
+}
