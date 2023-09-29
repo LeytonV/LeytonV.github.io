@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEADACHE</title>
+    <link rel="stylesheet" href="Project Page.css">
+</head>
+<body>
+    <script src="Assets\Navbar\Navbar.js"></script>
+    
+    <p class = "headerText">HEADACHE</p>
+    <div class = "section">
+        <div class = "titleLabel">
+            <p class = "title">PROJECT OVERVIEW</p>
+        </div>
+        <div class = "subTextHolder">
+            <div class = "overview">
+                <img class = "overviewImage"src="Assets\Projects\HEADACHE\HEADACHE.gif">
+                <div class = "overviewSheet">
+                    <p class = "overviewSectionDescription">Brutal, eyeburning hotline-miami style FPS</p>
+                    <div class = "overviewDivider"></div>
+                    <div class = "overviewSection">
+                        <p class = "overviewSectionTitle">GET IT:</p>
+                        <a href="https://meltpack.itch.io/headache"><img class = "overviewIcon" src="Assets\Social\itchio.svg" alt=""></a>
+                    </div>
+                    <div class = "overviewDivider"></div>
+                    <div class = "overviewSection">
+                        <p class = "overviewSectionTitle">TOOLS<br>USED:</p>
+                        <div class = "overviewTagList">
+                            <p class = "overviewTag">unity</p>
+                            <p class = "overviewTag">blender</p>
+                            <p class = "overviewTag">c#</p>
+                        </div>
+                    </div>
+                    <div class = "overviewDivider"></div>
+                    <div class = "overviewSection">
+                        <p class = "overviewSectionTitle">SKILLS<br>USED:</p>
+                        <div class = "overviewTagList">
+                            <p class = "overviewTag">programming</p>
+                            <p class = "overviewTag">procedural generation</p>
+                            <p class = "overviewTag">shaders</p>
+                            <p class = "overviewTag">modelling</p>
+                            <p class = "overviewTag">texturing</p>
+                            <p class = "overviewTag">animating</p>
+                            <p class = "overviewTag">vfx</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class = "overViewText">HEADACHE is a brutal FPS with roguelike elements, inspired by the ultraviolence of the Hotline Miami series.
+                The goal of the project was to make the player think and act on their feet, encouraging improvisation and recklessness.
+                Everything in the game was designed, programmed, modelled, animated, and generally created by me.
+            </p>
+        </div>
+    </div>
+
+    <div class = "section">
+        <div class = "titleLabel">
+            <p class = "title">THE NITTY GRITTY</p>
+        </div>
+        <p class = "overViewText">The game uses a texture-to-level system, which I explain about in the next section. As well as some interesting shaders for the artstyle. HEADACHE was more of a design challenge for me to create a first-person Hotline Miami, which is a challenge
+            as Hotline Miami's whole gameplay loop, and the experience that comes from it, relies on the player being able to see top down, and see threats through walls
+            thus being able to plan around them. HEADACHE resolves this by relying on the player's instincts, as well as using audio, and directional markers when surrounded by enemies.
+        </p>
+    </div>
+
+    <div class = "section">
+        <div class = "titleLabel">
+            <p class = "title">THE LEVEL GENERATOR</p>
+        </div>
+        <p class = "overViewText">Every level in HEADACHE is randomly generated. This is mainly to keep things replayable. The final level is assembled by creating a 3x3 grid, and creating a route for the level to follow (fig.1)
+            Once that's complete, the level is created by generating rooms for each tile in the route. These rooms exist on the hard drive as 49x49 textures (fig.2), in which the game walks through, and based on the pixel's color, spawns walls, glass, doors, enemies, etc. (fig.3)
+        </p>
+
+        <div class = "triplePic">
+            <div class = picHolder>
+                <img class = "picture" src="Assets/Projects/HEADACHE/LevelGen1.png">
+                <p class = "picCaption">(fig.1) EXAMPLE ROUTE THROUGH A LEVEL</p>
+            </div>
+            <div class = picHolder>
+                <img class = "picture" src="Assets/Projects/HEADACHE/LevelGen2.jpg">
+                <p class = "picCaption">(fig.2) RAW DATA FOR A EXAMPLE LEVEL. THESE ARE STORED IN 49x49 PNGS TO BE READ AND CONSTRUCTED IN REALTIME</p>
+            </div>
+            <div class = picHolder>
+                <img class = "picture" src="Assets/Projects/HEADACHE/LevelGen3.jpg">
+                <p class = "picCaption">(fig.3) THE IN-GAME LEVEL GENERATED FROM THE LEVEL TEXTURE (fig.2)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "section">
+        <div class = "titleLabel">
+            <p class = "title">THE SHADERS</p>
+        </div>
+        <p class = "overViewText">HEADACHE's artstyle required a lot of shaders to be written. The main ones are the dither shader, and the outline shader.
+            The dither shader (which causes these pixel-ly effects over dark areas) was created by converting the pixel's color into a HSV color, then taking the Value of that HSV and running it through a Bayer dither algorithm to alternate the pixels based on the value. After that the final output color is a blend between black, and yellow, based on that value.
+            The outlines are created by checking each pixel's surrounding pixels, and anywhere that the distance to each pixel's coordinate exceeds a certain value, is where a outline is drawn.
+        </p>
+        <img class = "singleImage" src="Assets\Games\HEADACHE\Media\shaders.jpg" alt="">
+    </div>
+
+    <div class = "section">
+        <div class = "titleLabel">
+            <p class = "title">MEDIA</p>
+        </div>
+        <div class = "dualPic">
+            <img class = "picture" src="Assets/Projects/HEADACHE/Media/1.gif">
+            <img class = "picture" src="Assets/Projects/HEADACHE/Media/2.gif">
+        </div>
+        <div style="height: 25px;"></div>
+        <div class = "dualPic">
+            <img class = "picture" src="Assets/Projects/HEADACHE/Media/3.gif">
+            <img class = "picture" src="Assets/Projects/HEADACHE/Media/4.gif">
+        </div>
+    </div>
+
+</body>
+</html>
